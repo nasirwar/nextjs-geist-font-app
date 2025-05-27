@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{title}}</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-gray-50 font-sans min-h-screen flex flex-col">
+  <!-- Header with responsive navigation -->
+  <header class="bg-black shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-bold text-white">Nemo Tour</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="/" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a href="/destinations" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-map-marker-alt mr-2"></i>Destinations
+          </a>
+          <a href="/booking" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-calendar-alt mr-2"></i>Booking
+          </a>
+        </nav>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button type="button" class="text-gray-300 hover:text-white focus:outline-none" id="mobile-menu-button">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="/" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-home mr-2"></i>Home
+          </a>
+          <a href="/destinations" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-map-marker-alt mr-2"></i>Destinations
+          </a>
+          <a href="/booking" class="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fas fa-calendar-alt mr-2"></i>Booking
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {{{body}}}
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="text-center text-gray-300">
+        <p>&copy; 2024 Nemo Tour. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile menu toggle script -->
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
