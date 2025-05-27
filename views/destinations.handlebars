@@ -1,0 +1,81 @@
+<!-- Hero Section -->
+<div class="relative bg-black text-white rounded-lg overflow-hidden mb-12">
+  <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/1482927/pexels-photo-1482927.jpeg')] bg-cover bg-center opacity-50"></div>
+  <div class="relative px-6 py-24 sm:px-8 sm:py-32 text-center">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Discover Kashmir</h2>
+    <p class="text-xl mb-8 max-w-3xl mx-auto">Explore the paradise on earth with our curated collection of breathtaking destinations</p>
+  </div>
+</div>
+
+<!-- Destinations Categories -->
+<div class="container mx-auto px-4">
+  <div class="space-y-16 mb-16">
+    {{#each destinations}}
+      <section class="bg-white rounded-lg shadow-sm overflow-hidden">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-6 text-center border-b border-gray-200 pb-4">{{@key}}</h3>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{#each this}}
+              <div class="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                <div class="aspect-w-16 aspect-h-9">
+                  <img 
+                    src="https://images.pexels.com/photos/2387873/pexels-photo-2387873.jpeg"
+                    alt="{{this}}"
+                    class="object-cover w-full h-48"
+                    onerror="this.src='https://images.pexels.com/photos/1482927/pexels-photo-1482927.jpeg'"
+                  />
+                </div>
+                <div class="p-6">
+                  <h4 class="font-semibold text-lg mb-2">{{this}}</h4>
+                  <p class="text-gray-600 text-sm mb-4">Discover the unique charm and beauty of this amazing destination in Kashmir.</p>
+                  <div class="flex items-center justify-between">
+                    <a href="/booking" class="inline-flex items-center text-black hover:text-gray-700 transition-colors duration-200">
+                      <i class="fas fa-calendar-alt mr-2"></i>
+                      Book Now
+                    </a>
+                    <span class="text-sm text-gray-500">
+                      <i class="fas fa-map-marker-alt mr-1"></i>
+                      Kashmir
+                    </span>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </section>
+    {{/each}}
+  </div>
+
+  <!-- Features Section -->
+  <section class="bg-white rounded-lg shadow-sm p-8 mb-12">
+    <h3 class="text-2xl font-bold mb-8 text-center">Why Visit Kashmir?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <i class="fas fa-mountain text-4xl text-black mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Natural Beauty</h4>
+        <p class="text-gray-600">Experience breathtaking landscapes, from snow-capped peaks to serene lakes</p>
+      </div>
+      <div class="text-center">
+        <i class="fas fa-utensils text-4xl text-black mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Rich Culture</h4>
+        <p class="text-gray-600">Immerse yourself in local traditions, cuisine, and warm hospitality</p>
+      </div>
+      <div class="text-center">
+        <i class="fas fa-hiking text-4xl text-black mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Adventure</h4>
+        <p class="text-gray-600">From skiing to trekking, endless opportunities for thrill-seekers</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <div class="bg-black text-white rounded-lg p-8 text-center mb-12">
+    <h3 class="text-2xl font-bold mb-4">Ready to Experience Kashmir?</h3>
+    <p class="mb-6">Book your tour today and create memories that last a lifetime.</p>
+    <a href="/booking" class="inline-flex items-center bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+      <i class="fas fa-calendar-alt mr-2"></i>Book Your Tour
+    </a>
+  </div>
+</div>
