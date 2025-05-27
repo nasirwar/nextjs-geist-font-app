@@ -1,0 +1,75 @@
+<div class="max-w-2xl mx-auto text-center">
+  <!-- Success Icon -->
+  <div class="mb-8">
+    <i class="fas fa-check-circle text-6xl text-green-500"></i>
+  </div>
+
+  <!-- Confirmation Message -->
+  <div class="bg-white rounded-lg shadow-sm p-8 mb-8">
+    <h2 class="text-3xl font-bold mb-6">Booking Confirmed!</h2>
+    <div class="space-y-4 mb-8">
+      <p class="text-xl">Thank you, <span class="font-semibold">{{name}}</span>!</p>
+      <p class="text-gray-600">Your booking has been successfully confirmed.</p>
+    </div>
+
+    <!-- Booking Details -->
+    <div class="bg-gray-50 rounded-lg p-6 mb-8">
+      <h3 class="text-lg font-semibold mb-4">Booking Details</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+        <div>
+          <p class="text-gray-600">
+            <i class="fas fa-map-marker-alt mr-2"></i>Destination
+          </p>
+          <p class="font-semibold">{{destination}}</p>
+        </div>
+        <div>
+          <p class="text-gray-600">
+            <i class="fas fa-calendar mr-2"></i>Date
+          </p>
+          <p class="font-semibold">{{date}}</p>
+        </div>
+        <div>
+          <p class="text-gray-600">
+            <i class="fas fa-users mr-2"></i>Guests
+          </p>
+          <p class="font-semibold">{{guests}} guest(s)</p>
+        </div>
+        <div>
+          <p class="text-gray-600">
+            <i class="fas fa-envelope mr-2"></i>Email
+          </p>
+          <p class="font-semibold">{{email}}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="text-left mb-8">
+      <h3 class="text-lg font-semibold mb-4">Next Steps</h3>
+      <ul class="space-y-3 text-gray-600">
+        <li class="flex items-start">
+          <i class="fas fa-envelope-open-text mt-1 mr-2"></i>
+          <span>A detailed confirmation email will be sent to {{email}}</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-phone mt-1 mr-2"></i>
+          <span>Our team will contact you 24 hours before the tour</span>
+        </li>
+        <li class="flex items-start">
+          <i class="fas fa-map mt-1 mr-2"></i>
+          <span>Meeting point details will be included in the email</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/" class="inline-flex items-center justify-center bg-black text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-200">
+        <i class="fas fa-home mr-2"></i>Return Home
+      </a>
+      <a href="/booking" class="inline-flex items-center justify-center bg-white text-black border-2 border-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-200">
+        <i class="fas fa-calendar-plus mr-2"></i>Book Another Tour
+      </a>
+    </div>
+  </div>
+</div>
